@@ -49,6 +49,7 @@ module.exports = withBundleAnalyzer({
     // Needed for SendGrid forms
     SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
   },
+  target: 'serverless',
   async redirects() {
     const sanityRedirects = await fetchSanityRedirects()
     return sanityRedirects
